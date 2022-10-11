@@ -1,0 +1,48 @@
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+
+    <div class="card text-center">
+        <div class="card-header">
+            <h3>Contact</h3>
+        </div>
+         <div class="card-body">
+          <form action="/contacto" method="post">
+
+            <div class="mb-3">
+              <label for="text">Name</label>
+              <input type="text" placeholder="Name" class="form-control" id="nombre" name="nombre">
+            </div>
+
+            <div class="mb-3">
+              <label for="text">Surname</label>
+              <input type="text" placeholder="Surname" class="form-control" id="apellido" name="apellido">
+            </div>
+
+            <div class="mb-3">
+              <label for="tel">Tel</label>
+              <input type="text" placeholder="Phone Number" class="form-control" id="telefono" name="telefono">
+            </div>
+            
+            <div class="mb-3">
+              <label for="email">Email</label>
+              <input type="email" placeholder="Email" class="form-control" id="mail" name="mail">
+            </div>
+
+            <div class="mb-3 ">
+            <label for="message">Message:</label>
+            <textarea name="comentario" class="form-control" placeholder="Write a message" cols="6" rows="3" id="comentario" name="comentario"></textarea>
+            </div>
+
+            <button class="btn btn-secondary btn-block">
+                Send
+            </button>
+            <p>{{message}}</p>
+          </form>
+        </div>
+    </div>
+</div>
+
+<div class="redes">
+FOLLOW ME IN 
+  <a href="https://www.instagram.com/">INSTRAGRAM</a>
+  <a href="https://vsco.co/gonzalouteyral/gallery">VSCO</a>
+</div>

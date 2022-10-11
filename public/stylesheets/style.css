@@ -1,0 +1,71 @@
+/* 
+
+
+font-family: 'Jost', sans-serif;
+
+
+*/ 
+
+/* Ajustes generales*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+header{
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    margin-bottom: 35px;
+    justify-content: space-evenly;
+}    
+
+h1 {
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+    color: #212D40;    
+}
+
+
+p {
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+}
+
+
+
+a{
+    list-style: none;
+    text-decoration: none;
+    color: #212D40;
+    margin: 10px 10px 0px;
+    
+}
+
+
+img{
+    height: 720px;
+    width: 1080px;
+    object-fit: cover;
+    object-position: center center;
+    
+}
+
+footer{
+    font-family: 'Jost', sans-serif;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.link{
+    list-style: none;
+    text-decoration: none;
+    color: #9ec5ab;
+}
+
+.redes{
+    font-family: 'Jost', sans-serif;
+    margin-top: 50px;
+    text-align: center;
+}
