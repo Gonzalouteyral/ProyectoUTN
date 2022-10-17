@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('contacto');
 });
 
-module.exports = router;
+
 
 router.post('/', async (req, res, next) => {
 
@@ -42,3 +42,5 @@ router.post('/', async (req, res, next) => {
 
 }); //cierra peticion del POST
 
+
+module.exports = router;

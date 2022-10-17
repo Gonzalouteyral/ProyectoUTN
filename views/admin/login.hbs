@@ -4,17 +4,15 @@
             <h3>LOGIN</h3>
         </div>
          <div class="card-body">
-          <form action="/admin&login" method="post">
+          <form action="/admin/login" method="post">
             <div class="mb-3">
-              <label for="usuario">Usuario</label>
-              <input type="text" placeholder="Name" class="form-control" id="usuario" aria-describedby="emailHelp" name="usuario">
+            <input type="text" placeholder="Usuario" class="form-control" id="usuario" name="usuario">
             </div>
             <div class="mb-3">
-              <label for="password">Password</label>
-              <input type="password" placeholder="Password" class="form-control" id="password" name="password">
+            <input type="password" placeholder="Password" class="form-control" id="Password" name="password">
             </div>
-            <button class="btn btn-secondary btn-block">
-               LOGIN
+            <button type="submit" class="btn btn-secondary btn-block">
+               Entrar
             </button>
             <p>{{message}}</p>
           </form>

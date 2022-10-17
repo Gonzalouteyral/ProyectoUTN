@@ -14,6 +14,7 @@ var sobreRouter = require('./routes/sobre'); // router/sobre.js
 var loginRouter = require('./routes/admin/login'); // routes/login.js
 var adminRouter = require('./routes/admin/novedades'); 
 
+
 var app = express();
 
 // view engine setup
@@ -27,7 +28,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
-  secret: '',
+  secret: 'sasasasasas',
   resave: false,
   saveUninitialized: true
 }))
@@ -53,6 +54,9 @@ app.use('/contacto', contactoRouter);
 app.use('/sobre', sobreRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured, adminRouter);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
