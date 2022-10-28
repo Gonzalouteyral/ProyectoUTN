@@ -6,13 +6,15 @@ var logger = require('morgan');
 
 require('dotenv').config();
 var session = require('express-session');
+var fileUpload = require('express-fileupload');
 
 var indexRouter = require('./routes/index'); // router/index.js
 var galeriaRouter = require('./routes/galeria'); // router/galeria.js
 var contactoRouter = require('./routes/contacto'); // router/contacto.js
 var sobreRouter = require('./routes/sobre'); // router/sobre.js
 var loginRouter = require('./routes/admin/login'); // routes/login.js
-var adminRouter = require('./routes/admin/novedades'); 
+var adminRouter = require('./routes/admin/novedades'); // routes/novedades.js
+
 
 var app = express();
 
@@ -27,7 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
-  secret: '',
+  secret: 'sasasasasas',
   resave: false,
   saveUninitialized: true
 }))
@@ -47,12 +49,22 @@ secured = async(req,res,next) => {
   }
 }
 
+
+app.use(fileUpload({
+  useTempFiles: true,
+  tempFileDir: '/tmp/'
+}));
+
+
 app.use('/', indexRouter);
 app.use('/galeria', galeriaRouter);
 app.use('/contacto', contactoRouter);
 app.use('/sobre', sobreRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured, adminRouter);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
