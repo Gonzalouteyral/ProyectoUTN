@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container vh-100 d-flex justify-content-center align-items-center">
     <div class="card text-center">
         <div class="card-header">
@@ -23,4 +24,31 @@
           
         </div>
     </div>
+=======
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+    <div class="card text-center">
+        <div class="card-header">
+            <h3>LOGIN</h3>
+        </div>
+         <div class="card-body">
+          <form action="/admin/login" method="post">
+            <div class="mb-3">
+            <input type="text" placeholder="Usuario" class="form-control" id="usuario" name="usuario">
+            </div>
+            <div class="mb-3">
+            <input type="password" placeholder="Password" class="form-control" id="Password" name="password">
+            </div>
+            <button type="submit" class="btn btn-secondary btn-block">
+               Entrar
+            </button>
+            <p>{{message}}</p>
+          </form>
+
+          {{#if error}}
+          <p>Usuario o Contraseña incorrecta</p>
+          {{/if}}
+          
+        </div>
+    </div>
+>>>>>>> 462795d3be5ece8dd75b5756c24f5e505652b4fb
 </div>

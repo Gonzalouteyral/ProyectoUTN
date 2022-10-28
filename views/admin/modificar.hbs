@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container" style="margin: 100px auto">
     <div class="row">
         <div class="col-6 offset-3">
@@ -36,4 +37,44 @@
 
 {{#if error}}
 <h5 style="text-align:center;">{{message}}</h5>
+=======
+<div class="container" style="margin: 100px auto">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4 style="text-align:center; margin: 60px">Modificar imagen</h4>
+            <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
+            <input type="hidden" value="{{galeria.id}}" name="id">
+            <div class="form-group" style="margin: 10px ;">
+                <label for="">Titulo</label>
+            <input type="text" value="{{galeria.titulo}}" class="form-control" name="titulo">
+            </div>    
+            <div style="text-align: center ;">
+            <div class="form-group">
+            <p>
+            <label >
+                Imagen:<input type="file" name="imagen" id="imagen"/></label>
+            </p>
+            </div>
+            <div style="text-align: center ;">
+            <p>
+            <label><input type="checkbox" name="img_delete" id="img_delete" value="1">¿Eliminar imagen actual?</label>
+            <input type="hidden" name="img_original" value="{{galeria.img_id}}">
+            </p>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div style="text-align: center ;">
+            <button type="submit" class="btn btn-dark" style="align-items: center ;">Modificar</button>
+        </div>
+        </form>   
+        </div>
+    </div>
+</div>
+
+
+
+{{#if error}}
+<h5 style="text-align:center;">{{message}}</h5>
+>>>>>>> 462795d3be5ece8dd75b5756c24f5e505652b4fb
 {{/if}}
